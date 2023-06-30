@@ -1,0 +1,3 @@
+# GoRel
+
+## Install `gorel`:

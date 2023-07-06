@@ -1,0 +1,16 @@
+title: SomeTitle
+# Configuration for the http server
+http_srv_cfg:
+  name:  "ivmAPIGateway"
+  port: $PORT
+  timeout: 10s
+  read_timeout: 5s
+  write_timeout: 5s
+  read_header_timeout: 10s
+  idle_timeout: 10s
+  version: "0.0.1"
+  tls:
+    disabled: true
+    public_key: "localhost.crt"
+    private_key: "localhost.key"
+  host: ["ivmanto.dev"]

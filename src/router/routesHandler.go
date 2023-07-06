@@ -14,5 +14,10 @@ func (h *routesHandler) router() chi.Router {
 
 	r.Method("GET", "/", getHome())
 
+	// Route the websocket connection point `ws`
+	r.Route("/ws", func(r chi.Router) {
+		r.Get("/*", h.wsEndpoint)
+	})
+
 	return r
 }
